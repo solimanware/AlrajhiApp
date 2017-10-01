@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button right ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>الرئيسية</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <img src="assets/img/slider.jpg" alt="">
+  </div>
+  <ion-grid text-center dir="rtl">
+    <ion-row>
+      <ion-col col-4 (click)="goToFamily()">
+        <button ion-button class="button-circle" color="light">  
+          <ion-icon name="person" icon-center></ion-icon>
+        </button>
+        <p no-margin>عائلة الراجحي</p>
+      </ion-col>
+      <ion-col col-4 (click)="goToNews()">
+        <button ion-button class="button-circle" color="light">  
+            <ion-icon name="paper" icon-center></ion-icon>
+          </button>
+        <p no-margin>الأخبار</p>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button class="button-circle" color="light">  
+              <ion-icon name="calendar" icon-center></ion-icon>
+            </button>
+        <p no-margin>المناسبات</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4 (click)="goToProjects()">
+        <button ion-button class="button-circle" color="light">  
+            <ion-icon name="chatbubbles" icon-center></ion-icon>
+          </button>
+        <p no-margin>مشاريع</p>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button class="button-circle" color="light">  
+              <ion-icon name="albums" icon-center></ion-icon>
+            </button>
+        <p no-margin>صندوق العائلة</p>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button class="button-circle" color="light">  
+                <ion-icon name="call" icon-center></ion-icon>
+              </button>
+        <p no-margin>اتصل بنا</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button class="button-circle" color="light">  
+              <ion-icon name="cash" icon-center></ion-icon>
+            </button>
+        <p no-margin>التبرعات</p>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button class="button-circle" color="light">  
+                <ion-icon name="help" icon-center></ion-icon>
+              </button>
+        <p no-margin>الراجحي ويكي</p>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button class="button-circle" color="light">  
+                  <ion-icon name="albums" icon-center></ion-icon>
+                </button>
+        <p no-margin>الراجحي ميديا</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
