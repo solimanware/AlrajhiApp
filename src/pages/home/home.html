@@ -8,24 +8,32 @@
 </ion-header>
 
 <ion-content padding>
-  <div>
-    <img src="assets/img/slider.jpg" alt="">
-  </div>
+  <ion-slides class="slider" (ionSlideDidChange)="slideChanged()" autoplay="3000" loop="true" dir="rtl">
+        <ion-slide>
+            <img src="assets/img/slider.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/img/slider1.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/img/slider2.jpg" alt="">
+        </ion-slide>
+  </ion-slides>
   <ion-grid text-center dir="rtl">
     <ion-row>
-      <ion-col col-4 (click)="goToFamily()">
+      <ion-col col-4 tappable (click)="goToFamily()">
         <button ion-button class="button-circle" color="light">  
           <ion-icon name="person" icon-center></ion-icon>
         </button>
         <p no-margin>عائلة الراجحي</p>
       </ion-col>
-      <ion-col col-4 (click)="goToNews()">
+      <ion-col col-4 tappable (click)="goToNews()">
         <button ion-button class="button-circle" color="light">  
             <ion-icon name="paper" icon-center></ion-icon>
           </button>
         <p no-margin>الأخبار</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-4 tappable (click)="goToEvents()">
         <button ion-button class="button-circle" color="light">  
               <ion-icon name="calendar" icon-center></ion-icon>
             </button>
@@ -33,7 +41,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-4 (click)="goToProjects()">
+      <ion-col col-4 tappable (click)="goToProjects()">
         <button ion-button class="button-circle" color="light">  
             <ion-icon name="chatbubbles" icon-center></ion-icon>
           </button>

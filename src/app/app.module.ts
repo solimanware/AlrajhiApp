@@ -1,3 +1,4 @@
+import { FamilyDetailsPage } from './../pages/family-details/family-details';
 import { ProjectsPage } from './../pages/projects/projects';
 import { NewsPage } from './../pages/news/news';
 import { FamilyPage } from './../pages/family/family';
@@ -12,6 +13,8 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ProjectProvider } from '../providers/project/project';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     FamilyPage,
     NewsPage,
-    ProjectsPage
+    ProjectsPage,
+    FamilyDetailsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,12 +40,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     FamilyPage,
     NewsPage,
-    ProjectsPage
+    ProjectsPage,
+    FamilyDetailsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProjectProvider
   ]
 })
 export class AppModule {}

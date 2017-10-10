@@ -1,0 +1,25 @@
+page-project-details {
+    $size:100px;
+    .project-bg{
+        height: $size;
+    }
+    .project-logo{
+        width: $size;
+        height: $size;
+        border-radius: $size;
+        position: relative;
+        margin-top: -$size/1.5;
+        right: calc(50% - (#{$size}/2));
+        background: white;
+        border: 3px solid #d0d0d0;
+    }
+    .text-header{
+        color: #dc7a18;
+    }
+    .text-content{
+        color: #4b4d52;
+    }
+    .padding-right{
+        padding-right: 16px;
+    }
+}

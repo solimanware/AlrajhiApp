@@ -27,6 +27,6 @@
 .content-bg {
     background: #f8f8f9;
 }
-ion-item {
+ion-item:not(:first-child) {
     margin-top: 15px !important;
 }

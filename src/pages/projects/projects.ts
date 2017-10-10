@@ -1,86 +1,88 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
 
-@Component({
-  selector: 'page-projects',
-  templateUrl: 'projects.html',
-})
+@Component({selector: 'page-projects', templateUrl: 'projects.html'})
 export class ProjectsPage {
   projects;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl : NavController, public navParams : NavParams) {
     this.projects = [
       {
-        logo: "assets/img/logos/tawthiq.png",
+        id: 1,
         title: "التوثيق العائلي",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectTawthiqPage'
 
-      },
-      {
-        logo: "assets/img/logos/ga2ezah.png",
+      }, {
+        id: 2,
         title: "جائزة الراجحي للتفوق",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectGaezaPage'
 
-      },
-      {
-        logo: "assets/img/logos/esla7.png",
+      }, {
+        id: 3,
         title: "الاصلاح العائلي",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectEslahPage'
 
-      },
-      {
-        logo: "assets/img/logos/re3ayah.png",
+      }, {
+        id: 4,
         title: "رعاية",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectReayahPage'
 
-      },
-      {
-        logo: "assets/img/logos/eskan.png",
+      }, {
+        id: 5,
         title: "الاسكان العائلي",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectEskanPage'
 
-      },
-      {
-        logo: "assets/img/logos/bayt.png",
+      }, {
+        id: 6,
         title: "بيت العائلة",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectBaytPage'
 
-      },
-      {
-        logo: "assets/img/logos/khebra.png",
+      }, {
+        id: 7,
         title: "خبرة",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
-      },
-      {
-        logo: "assets/img/logos/olfah.png",
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectKhebraPage'
+      }, {
+        id: 8,
         title: "تيسير الزواج",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
-      },
-      {
-        logo: "assets/img/logos/entaj.png",
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectZawajPage'
+      }, {
+        id: 9,
         title: "الانتاج العلمي",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
-      },
-      {
-        logo: "assets/img/logos/maqsoratrawaje7.png",
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectEntajPage'
+      }, {
+        id: 10,
         title: "مقصورة الرواجح",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
-      },
-      {
-        logo: "assets/img/logos/qot.png",
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectMaqsoratrwajehPage'
+      }, {
+        id: 11,
         title: "منتجعات قوت",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
-      },
-      {
-        logo: "assets/img/logos/maqsorate7tefal.png",
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectQoutPage'
+      }, {
+        id: 12,
         title: "المقصورة للاحتفالات",
-        brief:"تعريف بالعائلة، تاريخ العائلة"
-      },
+        brief: "تعريف بالعائلة، تاريخ العائلة",
+        page: 'ProjectMaqsoratehtehtifalPage'
+      }
     ]
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProjectsPage');
+  }
+
+  goToProject(project){
+    this.navCtrl.push('ProjectDetailsPage',project)
   }
 
 }

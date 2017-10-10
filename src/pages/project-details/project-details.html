@@ -1,0 +1,35 @@
+<ion-header>
+
+
+  <ion-navbar color="primary">
+    <ion-title text-center>{{project.title}}</ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content dir="rtl">
+
+  <ion-card>
+    <img class="project-bg" src="assets/img/projectbg.png" />
+    <img class="project-logo" src="assets/img/logos/projects/{{project.id}}.png" alt="">
+    <ion-card-content>
+      <ion-card-title text-center>
+        {{project.title}}
+      </ion-card-title>
+      <p text-center>
+        معلومات عن المشروع
+      </p>
+    </ion-card-content>
+    <div *ngIf="project.id == 2" text-center>
+        <button ion-button color="orangy" round>الترشح للجائزة</button>
+        <button ion-button color="browny" round>المتفوقين</button>
+      </div>
+  </ion-card>
+  <ion-card>
+    <ion-card-content [innerHTML]="projectContent">
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
